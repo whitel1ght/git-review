@@ -26,7 +26,7 @@ git
     console.log('branch updated')
   })
 
-// ololol
+// ololol lol
 // git checkout release/4.3.3 && 
 // git pull &&
 // git checkout feature/4.3.3/epg-performance-improvements-HZN4UI-12253 &&
