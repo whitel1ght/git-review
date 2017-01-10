@@ -8,7 +8,7 @@ program
   .option('-n, --pr_branch [branch]', 'pr branch')
   .parse(process.argv);
 
-git()
+git
   .checkout(options.base_branch)
   .pull()
   .checkout(options.pr_branch)
