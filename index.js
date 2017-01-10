@@ -10,9 +10,21 @@ program
 
 git
   .checkout(program.base_branch)
+  .then(() => {
+    console.log(`branch swithed to ${program.base_branch}`)
+  })
   .pull()
+  .then(() => {
+    console.log('branch updated')
+  })
   .checkout(program.pr_branch)
+  .then(() => {
+    console.log(`branch swithed to ${program.pr_branch}`)
+  })
   .pull('origin', program.pr_branch)
+  .then(() => {
+    console.log('branch updated')
+  })
 
 // ololol
 // git checkout release/4.3.3 && 
