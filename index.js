@@ -7,7 +7,12 @@ program
   .option('-b, --base_branch [branch]', 'base branch')
   .option('-n, --pr_branch [branch]', 'pr branch')
   .action((options) => {
-    
+    console.log(program.pr_branch)
+    git()
+      .checkout(options.base_branch)
+      .pull()
+      .checkout(options.pr_branch)
+      .pull('origin', options.pr_branch)
   })
   .parse(process.argv);
 
