@@ -9,10 +9,10 @@ program
   .parse(process.argv);
 
 git
-  .checkout(options.base_branch)
+  .checkout(program.base_branch)
   .pull()
-  .checkout(options.pr_branch)
-  .pull('origin', options.pr_branch)
+  .checkout(program.pr_branch)
+  .pull('origin', program.pr_branch)
 
 
 // git checkout release/4.3.3 && 
