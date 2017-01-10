@@ -8,11 +8,11 @@ program
   .option('-n, --pr_branch [branch]', 'pr branch')
   .parse(process.argv);
 
-git()
-  .checkout(options.base_branch)
+git
+  .checkout(program.base_branch)
   .pull()
-  .checkout(options.pr_branch)
-  .pull('origin', options.pr_branch)
+  .checkout(program.pr_branch)
+  .pull('origin', program.pr_branch)
 
 // ololol
 // git checkout release/4.3.3 && 
